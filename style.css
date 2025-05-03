@@ -4,24 +4,18 @@ body {
   }
   
   .board {
-    display: grid;
-    grid-template-columns: repeat(5, 80px);
-    grid-gap: 5px;
-    justify-content: center;
-    margin: 20px auto;
-  }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 各セルが均等幅に */
+  gap: 5px;
+  width: 90vw; /* ビューポートの90% */
+  max-width: 450px; /* 大画面では広がりすぎないように制限 */
+  margin: 20px auto;
+}
 
-  .cell {
-    width: 80px;
-    height: 80px;
-    font-size: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    cursor: pointer;
-    border: 1px solid #999;
-  }
+.cell {
+  aspect-ratio: 1; /* 幅と高さを1:1に保つ */
+  font-size: 6vw;  /* 画面に応じた文字サイズ */
+}
   
   .cell:hover {
     background: #ddd;
