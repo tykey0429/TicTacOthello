@@ -3,18 +3,24 @@ body {
     font-family: sans-serif;
   }
   
-  .board {
+  #board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 各セルが均等幅に */
+  grid-template-columns: repeat(5, 1fr); /* 各列を均等に */
   gap: 5px;
-  width: 90vw; /* ビューポートの90% */
-  max-width: 450px; /* 大画面では広がりすぎないように制限 */
+  width: 90vw;           /* ビューポートの90%の幅 */
+  max-width: 500px;      /* 最大幅を制限 */
   margin: 20px auto;
 }
 
 .cell {
-  aspect-ratio: 1; /* 幅と高さを1:1に保つ */
-  font-size: 6vw;  /* 画面に応じた文字サイズ */
+  aspect-ratio: 1;       /* セルを正方形に */
+  font-size: 6vw;        /* 画面に応じた文字サイズ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  border: 1px solid #999;
+  cursor: pointer;
 }
   
   .cell:hover {
