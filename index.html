@@ -18,24 +18,24 @@
   }
 
   #board {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 各列を均等に */
-    gap: 5px;
-    width: 90vw;           /* ビューポートの90%の幅 */
-    max-width: 500px;      /* 最大幅を制限 */
-    margin: 20px auto;
-  }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5列均等 */
+  gap: 6px;
+  width: 95vw;           /* 幅を95%に拡大 */
+  max-width: 600px;      /* 最大幅も拡大 */
+  margin: 20px auto;
+}
 
-  .cell {
-    aspect-ratio: 1;       /* セルを正方形に */
-    font-size: 6vw;        /* 画面に応じた文字サイズ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f0f0f0;
-    border: 1px solid #999;
-    cursor: pointer;
-  }
+.cell {
+  aspect-ratio: 1;
+  font-size: 8vw;        /* 文字も少し大きく */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  border: 1px solid #999;
+  cursor: pointer;
+}
 
   .cell:hover {
     background: #ddd;
