@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    cursor: pointer;
+    border: 1px solid #999;
+  }
+  
+  .cell:hover {
+    background: #ddd;
+  }
