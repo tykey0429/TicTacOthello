@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>〇×ゲーム</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #start-screen, #game-screen {
+      display: none;
+    }
+
+    #start-screen.active, #game-screen.active {
+      display: block;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      gap: 5px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .cell {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #333;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- スタート画面 -->
+  <div id="start-screen" class="active">
+    <h1>〇×ゲーム</h1>
+    <button onclick="startGame()">スタート</button>
+  </div>
+
+  <!-- ゲーム画面 -->
+  <div id="game-screen">
+    <h2 id="status">〇 の番です</h2>
+    <div id="timer">残り 15 秒</div> <!-- ← タイマー表示のためのdiv -->
+    <div id="board"></div>
+    <button onclick="resetGame()">リセット</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
