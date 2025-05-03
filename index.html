@@ -4,39 +4,43 @@
   <meta charset="UTF-8">
   <title>〇×ゲーム</title>
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-    }
+  body {
+    font-family: sans-serif;
+    text-align: center;
+  }
 
-    #start-screen, #game-screen {
-      display: none;
-    }
+  #start-screen, #game-screen {
+    display: none;
+  }
 
-    #start-screen.active, #game-screen.active {
-      display: block;
-    }
+  #start-screen.active, #game-screen.active {
+    display: block;
+  }
 
-    #board {
-      display: grid;
-      grid-template-columns: repeat(5, 60px);
-      gap: 5px;
-      justify-content: center;
-      margin: 20px auto;
-    }
+  #board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 各列を均等に */
+    gap: 5px;
+    width: 90vw;           /* ビューポートの90%の幅 */
+    max-width: 500px;      /* 最大幅を制限 */
+    margin: 20px auto;
+  }
 
-    .cell {
-      width: 60px;
-      height: 60px;
-      border: 1px solid #333;
-      font-size: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      background-color: #fff;
-    }
-  </style>
+  .cell {
+    aspect-ratio: 1;       /* セルを正方形に */
+    font-size: 6vw;        /* 画面に応じた文字サイズ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+
+  .cell:hover {
+    background: #ddd;
+  }
+</style>
 </head>
 <body>
 
